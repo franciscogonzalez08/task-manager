@@ -1,5 +1,9 @@
+// Requires
 const express = require("express");
 const tasks = require("./routes/tasks");
+const connectDB = require("./db/connect");
+require("dotenv").config();
+
 const app = express();
 const PORT = 3000;
 
@@ -13,4 +17,14 @@ app.get("/", (req, res) => {
   res.send("Task Manager App");
 });
 
-app.listen(PORT, console.log(`Server at port ${PORT} is running...`));
+// If co
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI);
+    app.listen(PORT, console.log(`Server at port ${PORT} is running...`));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
