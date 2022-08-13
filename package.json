@@ -1,0 +1,25 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Project made as part of the BAP Corporativo interview process",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscogonzalez08/task-manager.git"
+  },
+  "author": "Francisco Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franciscogonzalez08/task-manager/issues"
+  },
+  "homepage": "https://github.com/franciscogonzalez08/task-manager#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
