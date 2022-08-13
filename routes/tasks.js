@@ -9,7 +9,7 @@ const {
   createTask,
   updateTask,
   deleteTask,
-} = require("../controller/tasks");
+} = require("../controllers/tasks");
 
 router.use(authUser);
 
