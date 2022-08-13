@@ -13,11 +13,11 @@ app.use(express.json());
 // Routes
 app.use("/api/v1/tasks", tasks);
 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.send("Task Manager App");
 });
 
-// If co
+// If we get a successfull connection with MongoDB, then, we can start the server
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI);

@@ -37,7 +37,6 @@ const TaskSchema = mongoose.Schema({
   },
   ownerID: {
     type: String,
-    required: [true, "You must provide the ownerID of the task."],
     // OwnerID cannot be modified once it has been settled on creation
     immutable: true,
   },
