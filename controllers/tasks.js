@@ -17,6 +17,13 @@ const getTask = async (req, res) => {
     const { id: taskID } = req.params;
     const task = await Task.findById(taskID);
 
+    // dueDate of task is UTC() format. It needs an adjustment to match current timezone.
+    // TODO: Work on fixing timezone or delete this section
+    // const date = task.at(0).dueDate;
+    // const timezoneOffset = date.getTimezoneOffset();
+    // const localDate = date.getTime() - timezoneOffset * 60_000;
+    // const newDate = new Date(localDate);
+
     // Send task
     res.status(200).json(task);
   } catch (error) {
