@@ -49,7 +49,6 @@ router.use(authUser);
  *        completed: true
  *        dueDate: Sun Aug 14 2022 23:59:59 GMT-0500 (Central Daylight Time)
  *        tags: [test1, test2]
- *        ownerID: 62f7d0b54594c6fe82fefdc6
  *    User:
  *      type: object
  *      required:
